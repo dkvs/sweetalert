@@ -1,0 +1,76 @@
+.main-blanca{
+    background-color: #efefef;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "titulo titulo"
+        "sobre-ceramica sobre-ceramica "
+        "carrousel carrousel"
+        ;
+    gap: 10px;
+
+    .titulo {
+        grid-area: titulo;
+        padding-top: 100px;
+    }
+    
+    .sobre-ceramica {
+        grid-area: sobre-ceramica;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .text{
+            padding: 20px;
+            line-height: 2rem;
+        }
+    }
+    
+    .carrousel {
+        grid-area: carrousel;
+        padding-top: 100px;
+    }
+
+}
+
+
+/*responsive*/
+
+@media screen and (max-width: 780px) {
+
+    .main-blanca {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+            "titulo"
+            "sobre-ceramica"
+            "carrousel";
+        gap: 10px;
+    
+        .titulo {
+            grid-area: titulo;
+        }
+
+        .sobre-ceramica {
+            grid-area: sobre-ceramica;
+            display: flex;
+            flex-direction: column;
+
+            .secc{
+                width: 50vw;
+            }
+        }
+        
+        .carrousel {
+            grid-area: carrousel;
+
+            .productos {
+                display: flex;
+                flex-wrap: wrap;    
+                flex-direction: column;  
+            }
+        }
+    }
+}

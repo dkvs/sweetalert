@@ -1,0 +1,114 @@
+.pagina-producto {
+    background-color: #efefef;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "miga miga"
+        "producto-ficha especificaciones"
+        "producto-ficha especificaciones";
+    gap: 10px;
+    padding: 20px 0px 20px 0px;
+    height: 100vh;
+
+        .miga {
+            grid-area: miga;
+            padding-left: 20px;
+        }
+
+        .producto-ficha {
+
+            grid-area: producto-ficha;
+
+            .compra {
+                text-align: center;
+            }
+        }
+
+        .especificaciones {
+            grid-area: especificaciones;
+            .title-section {
+                padding-bottom: 20px;
+                padding-left: 0px;
+            }
+            .precio {
+                font-size: 2.5rem;
+                padding-bottom: 40px;
+            }
+
+            .carrito {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 40px;
+
+                .cant {
+                    padding-bottom: 20px;
+
+                    #cars {
+                        padding: 15px;
+                        border: 1px solid white;
+                    }
+                }
+                
+                .boton-comprar {
+                    .comprar {
+                        background-color: rgba(0, 0, 0, 0.801);
+                        text-align: center;
+                        text-decoration: none;
+                        color: white;
+                        padding: 10px 8px 10px 8px;
+                    }
+
+                }
+
+            }
+
+            .detalle {
+                padding-top: 20px
+            }
+        }
+
+        
+    
+        .pd {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+
+
+/* Responsive */
+
+
+
+@media screen and (max-width: 580px) {
+
+    .pagina-producto {
+        background-color: #efefef;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+            "miga"
+            "producto-ficha"
+            "especificaciones";
+        gap: 10px;
+        justify-items: center;
+
+        .especificaciones {
+            text-align: center;
+
+            .title-section{
+                text-align: center;
+            }
+
+            #cars {
+                padding: 15px;
+                border: 1px solid white;
+            }
+            
+        }
+    }
+}

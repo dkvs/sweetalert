@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: $bg_claro;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+/* efecto limon */
+
+#flecha {
+    font-weight: bold;
+    position: relative;
+}
+.btn {
+    padding: 0 12px 9px;
+}
+
+#flecha {
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+}
+.logo:hover #flecha {
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+

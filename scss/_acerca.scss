@@ -1,0 +1,61 @@
+.main-acerca{
+    background-color: #efefef;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "acercade acercade"
+        "nosotros imagen";
+    gap: 10px;
+    padding: 40px;
+
+        .acercade {
+            grid-area: acercade;
+            padding-top: 100px;
+        }
+        
+        .nosotros {
+            grid-area: nosotros;
+        }
+        
+        .imagen {
+            grid-area: imagen;
+            text-align: center;
+            overflow: hidden;
+        }
+    
+}
+
+
+/*responsive*/
+
+@media screen and (max-width: 580px) {
+
+
+    .main-acerca {
+            display: grid;
+            gap: 0.7rem;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,auto);
+            grid-template-areas: 
+            "acercade acercade"
+            "nosotros nosotros"
+            "imagen imagen";
+
+
+            .acercade{
+                grid-area: acercade;
+            }
+        
+            .nosotros {
+                grid-area: nosotros;
+
+            }
+        
+            .imagen{
+                grid-area: imagen;
+            }
+        
+         }
+
+}

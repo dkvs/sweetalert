@@ -1,0 +1,77 @@
+
+
+.main-catalogo {
+    background-color: #efefef;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "slider slider slider slider"
+        "carrousel carrousel carrousel carrousel"
+        "colecciones colecciones colecciones colecciones";
+    gap: 10px;
+
+    .slider{
+        grid-area: slider;
+        text-align: center;
+    }
+
+    .slider img {
+        width:100%;
+    }
+
+    .carrousel {
+        grid-area: carrousel;
+        padding-top: 100px;
+    }
+
+}
+
+
+
+  
+
+/*responsive*/
+
+  @media screen and (max-width: 580px) {
+
+
+    .main-catalogo {
+            gap: 0.7rem;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,auto);
+            grid-template-areas: 
+            "slider slider"
+            "carrousel carrousel"
+            "colecciones colecciones";
+
+            .slider{
+                grid-area: slider;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        
+            .productos{
+                grid-area: productos;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+
+            .colecciones {
+                grid-area: colecciones;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .dif-colecc{
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+
+    }
+
+}

@@ -1,0 +1,154 @@
+
+/*MAP en los trabajos coloque a cada icono un color distinto, pero no me gusta como queda asì que voy a colocarles a todos el mismo color*/
+
+
+$redes:(
+			fa-twitter: #ffebcd,
+			fa-facebook: #ffebcd,
+			fa-instagram: #ffebcd,
+	 );
+
+$fa-twitter: map-get($redes, fa-twitter);
+$fa-facebook: map-get($redes, fa-facebook);
+$fa-instagram: map-get($redes, fa-instagram);
+
+.fa-twitter {
+    background: $fa-twitter;
+}
+
+.fa-instagram {
+    background: $fa-instagram;
+}
+
+.fa-facebook {
+    background: $fa-facebook;
+}
+
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.801);
+    color: #ffebcd;
+    width: 100%;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "menu-footer products contact logo"
+        "menu-footer products contact logo"
+        ;
+    gap: 10px;
+
+    .menu-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .items-title {
+        padding-top: 10px;
+        padding-bottom: 20px;        
+    }
+
+    .ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footerLink {
+        color: blanchedalmond;
+        font-size: 12px;
+
+}
+ 
+    .contact {        
+        .fa {
+            padding: 10px;
+            font-size: 25px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            color: rgba(0, 0, 0, 0.801);
+          }
+          .fa:hover {
+            opacity: 0.7;
+        }
+ 
+    }
+
+    
+}
+
+
+/* Responsive */
+
+
+
+@media screen and (max-width: 580px) {
+
+    .footer {
+        width: auto;
+        background-color: rgba(0, 0, 0, 0.801);
+        color: blanchedalmond;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+            "menu-footer"
+            "products"
+            "contact" 
+            "logo"
+            ;
+        gap: 10px;
+        justify-items: center;
+    
+        
+        .menu-footer {
+            grid-area: menu-footer;
+            display: flex;
+            align-items: center;
+            padding-right: 20px;
+            
+            .items-title {
+                padding-top: 10px;
+                padding-bottom: 20px;
+                
+            }
+
+            .footerLink {
+                color: blanchedalmond;
+                font-size: 12px;
+            
+            }
+        }
+        
+        .products {
+            grid-area: products;
+            padding-right: 20px;
+        
+        }
+        
+        .contact {
+            grid-area: contact;
+            padding-right: 20px;
+        
+        }
+
+        .logo {
+            grid-area: logo;
+        }
+
+    
+        .items {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            font-size: 12px;
+        }
+        
+        .seguinos {
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+    }
+}
